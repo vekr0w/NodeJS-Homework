@@ -3,10 +3,11 @@ const fs = require("fs");
 const city = require("./configuration").city;
 const API_KEY = require("./configuration").API_KEY;
 const URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`;
+let outputData = "";
 
-exports.outputData = http
+
+http
   .get(URL, (res) => {
-    let outputData = "";
     const { statusCode } = res;
     let error;
     if (statusCode !== 200) {
@@ -45,7 +46,6 @@ exports.outputData = http
     });
   })
   .on("error", (e) => {
-    let outputData = "";
     outputData = JSON.stringify(e);
     console.error(`Got error: ${e.message}`);
     updateOutputFile(outputData);
@@ -60,7 +60,6 @@ function updateOutputFile(message) {
 
 const hostname = "localhost";
 const port = 3000;
-
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader("Content-Type", "text/plain");
