@@ -12,4 +12,4 @@ Once you do that, just run "node app.js"
 This will run the app and do the following:
   - Start a server on localhost:3000 and display the data as JSON.
   - Display the data on the console.
-  - Create a new file output.txt(or update an already existing one) with the data
+  - Create a new file output.txt in the main directory(or update an already existing one) with the data
