@@ -3,7 +3,7 @@
 Node application that returns the current weather and time in a given city.
 
 To run this application you would first need to download/clone the source code from this repository.
-You need a recent nodeJS version. (It was tested on v17.4.0)
+You only need a recent nodeJS version. (It was tested on v17.4.0). There are no other dependancies.
 
 You can run the file by entering the desired city as the value of this variable. `exports.city = "Bulgaria";`
 
